@@ -1,0 +1,13 @@
+// Constants
+
+const RoomTypes = {
+    SUPER_DELUXE_DOUBLE_BED: "SUPER_DELUXE_DOUBLE_BED",
+    DELUXE_DOUBLE_BED: "DELUXE_DOUBLE_BED",
+    SUPER_DELUXE_TRIPLE_BED: "SUPER_DELUXE_TRIPLE_BED",
+    DELUXE_TRIPLE_BED: "DELUXE_TRIPLE_BED"
+};
+
+export default RoomTypes;
+// export default ROOM_TYPES;
+
+
