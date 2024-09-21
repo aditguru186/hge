@@ -1,1 +1,0 @@
-node db_setup.js
