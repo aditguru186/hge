@@ -19,8 +19,8 @@ let pb;
     * price: number}>}
  */
 let rooms;    
-let setUpDB = async () => {
-    pb = new PocketBase('http://pocketbase.hotelguruestate.com');
+export  async function _setUpDB () {
+    pb = new PocketBase('http://pocketbase.hotelguruestate.com/_/');
     let response = await fetch("/api");
     const seedDataBody = await response.json();
     rooms = seedDataBody.rooms;
@@ -46,6 +46,5 @@ let setUpDB = async () => {
 }
 
 export {
-    setUpDB
 }
 
