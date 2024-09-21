@@ -1,8 +1,8 @@
 <script>
-    import { setUpDB } from "./+server";
+    import {_setUpDB } from "./+server.js";
 </script>
 
 <section>
     <h1>Load Data</h1>
-    <button on:click={() => setUpDB()}>Load Data</button>
+    <button on:click={() => _setUpDB()}>Load Data</button>
 </section>
