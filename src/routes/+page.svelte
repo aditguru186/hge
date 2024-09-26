@@ -1,12 +1,17 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import {Button} from '$lib/components/ui/button';
-    // import BaseService  from '../backend/base_service.tsx'; // some error in importing tsx in svelte kit
-      import * as Alert from "$lib/components/ui/alert";
+    import Menubar1 from '$lib/components/Menubar1.svelte';
 
     onMount(async () => {
         console.log("+page.svelte onMount")
     })
+    let menuItems = [
+        { name: "Home", href: "/" },
+        { name: "Rooms", href: "/rooms" },
+        { name: "Offers", href: "/offers" },
+        { name: "About Us", href: "/about" },
+    ];
 
     let loadData = async () => {
         console.log("loadData");
@@ -15,14 +20,9 @@
 </script>
 
 <section>
-    <a href="/load_data">Load Data into DB, perform only once.</a>
-    <Button >Load Data</Button>
-     <Alert.Root>
-        <Alert.Title>Heads up!</Alert.Title>
-        <Alert.Description>
-            You can add components to your app using the cli.
-        </Alert.Description>
-    </Alert.Root>
+    <!-- <Button on:click={loadData}>Load Data</Button> -->
+    <Menubar1 menuItems={menuItems}/>
+    
 </section>
 
 
