@@ -11,7 +11,6 @@ let pb;
  * @type {Array<{id: number, 
     * room_number: number, 
     * ac: boolean, 
-    * images: string, 
     * category: string, 
     * availability: boolean, 
     * createdAt: string, 
@@ -25,20 +24,21 @@ export  async function _setUpDB () {
     const seedDataBody = await response.json();
     rooms = seedDataBody.rooms;
     try{
-        await pb.admins.authWithPassword(seedDataBody.POCKETBASE_EMAIL, seedDataBody.POCKETBASE_PASSWORD);
-        await pb.collection('room').create({
-            "id": 1,
-            "room_number": 101,
-            "ac": true,
-            "category": "SUPER_DELUXE_DOUBLE_BED",
-
-            // "images": "default.png",
-            // "availability": true,
-            // "createdAt": "2023-02-20T14:30:00Z",
-            // "updatedAt": "2023-02-20T14:30:00Z",
-            // "price": 2000
-        });
-        console.log("Authed with email : ",seedDataBody.POCKETBASE_EMAIL);
+        console.log(seedDataBody.POCKETBASE_EMAIL, seedDataBody.POCKETBASE_PASSWORD);
+        // const authData = await pb.collection('users').authWithPassword(seedDataBody.POCKETBASE_EMAIL, seedDataBody.POCKETBASE_PASSWORD);
+        const authData = await pb.admins.authWithPassword(seedDataBody.POCKETBASE_EMAIL, seedDataBody.POCKETBASE_PASSWORD);
+    //    const resp1 = await pb.collection('room').create({
+    //         "id": 1,
+    //         "room_number": 101,
+    //         "ac": true,
+    //         "category": "SUPER_DELUXE_DOUBLE_BED",
+    //         "availability": true,
+    //         "createdAt": "2023-02-20T14:30:00Z",
+    //         "updatedAt": "2023-02-20T14:30:00Z",
+    //         "price": 2000
+    //     });
+    //     console.log("Authed with email : ",seedDataBody.POCKETBASE_EMAIL);
+        console.log(authData);
     }
     catch(err){
         console.log("Error : ",err);
