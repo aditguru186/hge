@@ -3,9 +3,14 @@
     import * as Carousel from "$lib/components/ui/carousel/index.js";
     import logoIcon from "$lib/resources/logo_icon.png";
     import {Button} from '$lib/components/ui/button';
+    
 
-        $:styleForCarousel = "display : flex; width:100%";
+    //dynamic import for room images  to be done. find efficient way to do it.
     export let orientation_condition;
+    export let room_display_list;
+
+    $:styleForCarousel = "display : flex; width:100%";
+  
     let bookNow = () => {
 
         console.log("Booking Now.");
@@ -16,16 +21,20 @@
     }
 </script>
 
+
+{#each room_display_list as room}
 <div class="cardStyle" style="flex-direction: row;">
     <div class="carousel-container" style={styleForCarousel}>
         <Carousel.Root class="w-full max-w-xs">
         <Carousel.Content>
-            {#each Array(3) as _, i (i)}
+            {#each room.images as room_image, i (i)}
             <Carousel.Item>
                 <div class="p-1">
                 <Card.Root>
                     <Card.Content  class="flex aspect-square items-center justify-center p-6">
-                        <img src={logoIcon} alt="log">
+                        {#await import(`../resources/room_images/${room_image}`) then {default: src}}    
+                            <img {src} alt="room_image1">
+                        {/await}
                     </Card.Content>
                 </Card.Root>
                 </div>
@@ -36,18 +45,24 @@
         <Carousel.Next />
         </Carousel.Root>
         <div class="carousel-description">
-            <h1 style="font-size: 20px;"> Super Deluxe Double Bed</h1>
+            <h1 style="font-size: 20px;"> {room.name}</h1>
             <br>
-            <p> Experience luxury at our Super Deluxe Double Bed Room, featuring king-size bed, marble bathroom, AC, Wi-Fi, LED TV</p>
+            <p style="font-size: 10px;"> {room.description}</p>
+            <br>
+            <div style="display: flex;">
+                <h2 style="font-size: 20px; text-decoration: line-through;">4000  </h2>
+                <h2 style="font-size: 20px; color: red;"> ${room.price}  </h2>
+            </div>
             <Button on:click={bookNow}>Book Now</Button>
         </div>
         
     </div>
 </div>
+{/each}
 
 <style>
     .cardStyle{
-        padding: 3%;
+        padding: 2%;
         justify-content: center;
         align-items: center;
         border-radius: 20px;
