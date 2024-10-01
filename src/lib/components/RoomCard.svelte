@@ -5,20 +5,17 @@
     import {Button} from '$lib/components/ui/button';
     
 
-    //dynamic import for room images  to be done. find efficient way to do it.
+
     export let orientation_condition;
     export let room_display_list;
 
-    $:styleForCarousel = "display : flex; width:100%";
   
     let bookNow = () => {
-
         console.log("Booking Now.");
     }
-    if(!orientation_condition){
-        console.log(orientation_condition);
-        styleForCarousel="width:100%;";
-    }
+
+    $: styleForCarousel = orientation_condition ? 'display: flex; width: 100%' : 'width: 100%';
+    
 </script>
 
 
@@ -32,9 +29,9 @@
                 <div class="p-1">
                 <Card.Root>
                     <Card.Content  class="flex aspect-square items-center justify-center p-6">
-                        {#await import(`../resources/room_images/${room_image}`) then {default: src}}    
-                            <img {src} alt="room_image1">
-                        {/await}
+                        {#await import(`$lib/resources/rooms_images/${room_image.split('.')[0]}.png`) then {default: src}}
+                            <img {src} alt="room_image{i}">
+                        {/await}  
                     </Card.Content>
                 </Card.Root>
                 </div>
@@ -45,15 +42,15 @@
         <Carousel.Next />
         </Carousel.Root>
         <div class="carousel-description">
-            <h1 style="font-size: 20px;"> {room.name}</h1>
+            <h1 style="font-size: 20px; word-wrap: break-word;"> {room.name}</h1>
             <br>
             <p style="font-size: 10px;"> {room.description}</p>
             <br>
-            <div style="display: flex;">
-                <h2 style="font-size: 20px; text-decoration: line-through;">4000  </h2>
-                <h2 style="font-size: 20px; color: red;"> ${room.price}  </h2>
+            <div style="display: flex; align-items: center;">
+                <h2 style="font-size: 15px; text-decoration: line-through;">₹{room.initial_price}  </h2>
+                <h2 style="font-size: 20px; color: red;"> ₹{room.updateed_price}  </h2>
             </div>
-            <Button on:click={bookNow}>Book Now</Button>
+            <Button on:click={bookNow} style="width: 50%; font-size: 80%;">Book Now</Button>
         </div>
         
     </div>
