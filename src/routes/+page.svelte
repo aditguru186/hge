@@ -10,7 +10,6 @@
     let innerWidth = 0
 	let innerHeight = 0
     $: orientation_condition = (innerWidth> 1160)? true : false;
-
     let routeItems = [
         { name: "Home", path: "/" },
         { name: "Rooms", path: "/rooms" },
@@ -65,9 +64,8 @@
 </head>
 
 <svelte:window bind:innerWidth bind:innerHeight />
-
+<Navbar routes= {routeItems} />
 <section>
-    <Navbar routes= {routeItems} />
     <RoomCard bind:orientation_condition={orientation_condition} room_display_list={room_display_list}/>
 </section>
 
