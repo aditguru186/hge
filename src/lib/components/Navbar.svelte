@@ -16,7 +16,7 @@
         flex-direction: row;
         justify-content: space-around;
         border: 1px solid black;
-        border-radius: 10px;
+        border-radius: 3px;
         height: 20%;
     }
 </style>

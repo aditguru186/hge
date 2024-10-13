@@ -1,7 +1,13 @@
 <script>
 	import '../app.css';
+	import Navbar from '$lib/components/Navbar.svelte';
+	import  Footer  from '$lib/components/ui/card';
 </script>
 
 <slot>
-	<h1>Not found</h1>
+	<Navbar />
+<div>
+	yesss!
+</div>
+	<Footer />
 </slot>
