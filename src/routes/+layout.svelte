@@ -1,13 +1,13 @@
 <script>
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
-	import  Footer  from '$lib/components/ui/card';
+	// import  Footer  from '$lib/components/ui/card';
 </script>
 
 <slot>
-	<Navbar />
+	<!-- <Navbar /> -->
 <div>
 	yesss!
 </div>
-	<Footer />
+	<!-- <Footer /> -->
 </slot>
