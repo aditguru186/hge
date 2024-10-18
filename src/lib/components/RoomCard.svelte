@@ -4,6 +4,12 @@
     import logoIcon from "$lib/resources/logo_icon.png";
     import {Button} from '$lib/components/ui/button';
     import * as HoverCard from "$lib/components/ui/hover-card";
+    import BookNow from "./BookNow.svelte";
+    import SvelteOtp from "@k4ung/svelte-otp";
+	import { Modal, Content, Trigger}  from "sv-popup";
+        let value: string;
+        $: bookNowClicked = false;
+
 
 
     export let orientation_condition;
@@ -12,6 +18,7 @@
   
     let bookNow = () => {
         console.log("Booking Now.");
+        bookNowClicked = true;
     }
 
     $: styleForCarousel = orientation_condition ? 'display: flex; width: 100%' : 'width: 100%';
@@ -50,14 +57,19 @@
                 <h2 style="font-size: 15px; text-decoration: line-through;">₹{room.initial_price}  </h2>
                 <h2 style="font-size: 20px; color: red;"> ₹{room.updateed_price}  </h2>
             </div>
-            <HoverCard.Root>
+            <!-- <HoverCard.Root>
             <HoverCard.Trigger>
-                 <Button on:click={bookNow} style="width: 50%; font-size: 80%;">Book Now</Button>
             </HoverCard.Trigger>
             <HoverCard.Content class="w-80">
-                Call +91-9861133360 for booking.
+                
             </HoverCard.Content>
-            </HoverCard.Root>
+            </HoverCard.Root> -->
+
+            <Button on:click={bookNow} style="width: 50%; font-size: 80%;">Book Now</Button>
+            {#if bookNowClicked}
+                <BookNow/>
+            {/if}
+            
         </div>
         
     </div>

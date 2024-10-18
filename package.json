@@ -12,6 +12,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@internationalized/date": "^3.5.6",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -25,6 +26,7 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
 		"globals": "^15.0.0",
+		"lucide-svelte": "^0.453.0",
 		"pocketbase": "^0.21.5",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.5",
@@ -38,12 +40,14 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@k4ung/svelte-otp": "^0.0.9",
 		"@sveltejs/adapter-node": "^5.2.4",
 		"clsx": "^2.1.1",
 		"dotenv": "^16.4.5",
 		"embla-carousel-svelte": "^8.3.0",
 		"express": "^4.21.0",
-		"lucide-svelte": "^0.446.0",
+		"sv-popup": "^0.5.3",
+		"svelte-radix": "^1.1.1",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1",
 		"ts-node": "^10.9.2",

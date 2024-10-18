@@ -1,7 +1,6 @@
 <script lang="ts">
 
     import logoIcon from "$lib/resources/logo_icon.png";
-
 </script>
 
 <footer>
@@ -15,5 +14,6 @@
                 <h1>Get in Touch</h1>
             </div>  
         </div>
+    </div>
 
 </footer>
