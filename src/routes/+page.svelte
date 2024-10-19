@@ -5,17 +5,13 @@
     import logoIcon from "$lib/resources/logo_icon.png";
     import RoomCard from '$lib/components/RoomCard.svelte';
     import RoomTypes  from '../backend/constants.js';
+    import Footer from '$lib/components/Footer.svelte';
 
     
     let innerWidth = 0
 	let innerHeight = 0
     $: orientation_condition = (innerWidth> 1160)? true : false;
-    let routeItems = [
-        { name: "Home", path: "/" },
-        { name: "Rooms", path: "/rooms" },
-        { name: "Offers", path: "/offers" },
-        { name: "About Us", path: "/about" },
-    ];
+    
 
     let room_display_list = [
         {
@@ -64,10 +60,11 @@
 </head>
 
 <svelte:window bind:innerWidth bind:innerHeight />
-<Navbar routes= {routeItems} />
+<Navbar />
 <section>
     <RoomCard bind:orientation_condition={orientation_condition} room_display_list={room_display_list}/>
 </section>
+<Footer/>
 
 <style>
     section {
