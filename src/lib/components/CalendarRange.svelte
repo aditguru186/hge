@@ -16,15 +16,16 @@
     dateStyle: "medium"
   });
     let value: DateRange | undefined = {
-        start: new CalendarDate(2022, 1, 20),
-        end: new CalendarDate(2022, 1, 20).add({ days: 20 })
+        start: today(getLocalTimeZone()),
+        end: today(getLocalTimeZone()).add({ days: 20 })
     };
     
     let startValue: DateValue | undefined = undefined;
     let endValue: DateValue | undefined = undefined;
 </script>
 
-<div class="grid gap-2">
+<p style="color: black">Select your checkin and checkout Dates</p>
+<div class="grid gap-1">
   <Popover.Root openFocus>
     <Popover.Trigger asChild let:builder>
       <Button
@@ -62,7 +63,7 @@
     </Popover.Content>
   </Popover.Root>
 </div>
-Copy
+
 
 
 <style>

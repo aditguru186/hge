@@ -1,5 +1,10 @@
 <script>
-    export let routes;
+     let routes = [
+        { name: "Home", path: "/" },
+        { name: "Rooms", path: "/rooms" },
+        { name: "Offers", path: "/offers" },
+        { name: "About Us", path: "/about" },
+    ];
 </script>
 
 <div class="navbar">
@@ -18,5 +23,7 @@
         border: 1px solid black;
         border-radius: 3px;
         height: 20%;
+        width: 100%;
+        background-color: beige;
     }
 </style>
