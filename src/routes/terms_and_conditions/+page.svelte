@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Footer from "$lib/components/Footer.svelte";
     import Navbar from "$lib/components/Navbar.svelte";
 </script>
 
@@ -46,6 +47,7 @@
         <li>In case of advance payments, owing to Hotel Guru Estate best interest and views, it may or may not choose to refund the amount</li>
     </ol>
 </div>
+<Footer/>
 
 <style>
      .cardStyle{

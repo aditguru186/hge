@@ -1,5 +1,6 @@
 <script lang="ts">
     import Navbar from "$lib/components/Navbar.svelte"; 
+    import Footer from "$lib/components/Footer.svelte";
 </script>
 
 <Navbar/>
@@ -27,7 +28,7 @@
     Please ensure your own security by not sharing sensitive information like Debit/ Credit card PIN, email address’ password, OTP, UPI PIN.
 
 </div>
-
+<Footer />
 <style>
     .cardStyle{
         padding: 2%;

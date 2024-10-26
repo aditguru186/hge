@@ -5,7 +5,6 @@
 
 
 </script>
-
 <div class="footer">
     <a href="/"><img class ="footer_img" src={logoIcon} alt="logoIcon"></a>
     <div class="container">
@@ -13,8 +12,6 @@
         <br/>
         hotelguruestate@gmail.com
         <br/>
-
-
     </div>
      <div class="container">
         <a href="/terms_and_conditions">Terms and Conditions</a>
@@ -22,6 +19,8 @@
         <a href="/cancellation_policy">Cancellation Policy</a>
         <br/>
         <a href="/privacy_policy">Privacy Policy</a>
+        <br/>
+        <a href="/about_us">About Us</a>
 
     </div>
     
@@ -36,15 +35,16 @@
         background-color: #333;
         color: #fff;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         clear: both;
         border-top: 1px solid #444;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     .footer_img{
-        height:100px;
-        width:200px;
+        height:120px;
+        width:140px;
+        position: absolute;
     }
     .container{
         display: block;
