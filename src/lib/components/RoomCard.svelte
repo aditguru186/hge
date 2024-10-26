@@ -57,14 +57,6 @@
                 <h2 style="font-size: 15px; text-decoration: line-through;">₹{room.initial_price}  </h2>
                 <h2 style="font-size: 20px; color: red;"> ₹{room.updateed_price}  </h2>
             </div>
-            <!-- <HoverCard.Root>
-            <HoverCard.Trigger>
-            </HoverCard.Trigger>
-            <HoverCard.Content class="w-80">
-                
-            </HoverCard.Content>
-            </HoverCard.Root> -->
-
             <Button on:click={bookNow} style="width: 50%; font-size: 80%;">Book Now</Button>
             {#if bookNowClicked}
                 <BookNow/>

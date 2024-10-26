@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Footer from "$lib/components/Footer.svelte";
     import Navbar from "$lib/components/Navbar.svelte";
 </script>
 
@@ -17,6 +18,7 @@
         <li>In case of advance payments, owing to Hotel Guru Estate best interest and views, it may or may not choose to refund the amount</li>
     </ol>
 </div>
+<div class="footer-fixed"><Footer/></div>
 
 
 <style>
@@ -34,5 +36,10 @@
     .heading{
         font-size: large;
         font-weight: bold;
+    }
+    .footer-fixed{
+        bottom:0;
+        position: fixed;
+        width:100%;
     }
 </style>
