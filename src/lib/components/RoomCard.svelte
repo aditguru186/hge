@@ -55,7 +55,7 @@
             <br>
             <div style="display: flex; align-items: center;">
                 <h2 style="font-size: 15px; text-decoration: line-through;">₹{room.initial_price}  </h2>
-                <h2 style="font-size: 20px; color: red;"> ₹{room.updateed_price}  </h2>
+                <h2 style="font-size: 20px; color: red;"> ₹{room.updated_price}  </h2>
             </div>
             <Button on:click={bookNow} style="width: 50%; font-size: 80%;">Book Now</Button>
             {#if bookNowClicked}

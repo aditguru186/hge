@@ -40,11 +40,11 @@
         align-items: center;
         margin: 1%;
     }
-    /* .footer-fixed{
+    .footer-fixed{
         bottom:0;
         position: relative;
         width:100%;
-    } */
+    }
 
 
 </style>
