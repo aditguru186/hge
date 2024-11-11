@@ -36,8 +36,8 @@ export let room_display_list = [
         initial_price: 3500,
         updated_price: 2500,
         // price: process.env.ROOM_PRICE_SUPER_DELUXE_DOUBLE,// coming as undefined, try importing the environment variable
-        description: "Experience luxury at our Super Deluxe Triple Bed Room, featuring king-size bed, marble bathroom, AC, Wi-Fi, LED TV",
-        images: ["DT1.gif", "img13_lq.png", "img14_lq.png", "img15_lq.png"]
+        description: "Experience luxury at our Super Deluxe Double Bed Room, featuring king-size bed, marble bathroom, AC, Wi-Fi, LED TV",
+        images: ["img12_lq.png", "img13_lq.png", "img14_lq.png", "img15_lq.png"]
     }
 ];
 
