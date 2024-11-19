@@ -6,6 +6,7 @@ const RoomTypes = {
     SUPER_DELUXE_TRIPLE_BED: "SUPER DELUXE TRIPLE BED",
     DELUXE_TRIPLE_BED: "DELUXE TRIPLE BED"
 };
+export const wp_url = "https://wa.me/919861133360/?text=Hello%20I%20Want%20to%20book%20a%20room%20%22Code24%22";
 export let room_display_list = [
     {
         name: RoomTypes.SUPER_DELUXE_DOUBLE_BED,
