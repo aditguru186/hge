@@ -105,7 +105,7 @@
         padding-bottom: 2%;
         width: 100%;
         height: 100%;
-        background-color: hsl(48, 96%, 89%);
+        background-color: rgb(254, 243, 200);
         border-radius: 20px;
         margin: auto;
     }
@@ -119,7 +119,7 @@
 
     }
     .footer-fixed{
-        position: fixed;
+        position: relative;
         bottom: 0;
         width: 100%;
     }

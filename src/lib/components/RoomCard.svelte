@@ -8,21 +8,14 @@
     import SvelteOtp from "@k4ung/svelte-otp";
 	import { Modal, Content, Trigger}  from "sv-popup";
         let value: string;
-        $: bookNowClicked = false;
-
-
-
+    $: bookNowClicked = false;
     export let orientation_condition;
-    export let room_display_list;
-
-  
+    export let room_display_list; 
     let bookNow = () => {
         console.log("Booking Now.");
         bookNowClicked = true;
     }
-
-    $: styleForCarousel = orientation_condition ? 'display: flex; width: 100%' : 'width: 100%';
-    
+    $: styleForCarousel = orientation_condition ? 'display: flex; width: 100%' : 'width: 100%';    
 </script>
 
 
@@ -70,12 +63,12 @@
 
 <style>
     .cardStyle{
-        padding: 2%;
+        padding: 1%;
         justify-content: center;
         align-items: center;
         border-radius: 20px;
         height: 50%;
-        width: 50%;
+        width: 80%;
         background-color: hsl(48, 96%, 89%);
         margin: auto;
     }

@@ -24,9 +24,15 @@
 
 <svelte:window bind:innerWidth bind:innerHeight />
 <Navbar />
+{#if orientation_condition}
 <section>
     <RoomCard bind:orientation_condition={orientation_condition} room_display_list={room_display_list}/>
 </section>
+{:else}
+<section style="display: flex; flex-direction: column; width:max-content">
+    <RoomCard bind:orientation_condition={orientation_condition} room_display_list={room_display_list}/>
+</section>
+{/if}
 <div class="footer-fixed">
     <Footer/>
 </div>
