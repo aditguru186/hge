@@ -31,11 +31,12 @@
         display: flex;
         position: relative;
         bottom: 0;
+        height: 12vh;
         width: 100%;
         background-color: #333;
         color: #fff;
         text-align: center;
-        padding: 10px;
+        padding: 1px;
         clear: both;
         border-top: 1px solid #444;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

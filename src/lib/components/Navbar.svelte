@@ -17,14 +17,16 @@
 
     
 <style>
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        border: 1px solid black;
-        border-radius: 3px;
-        height: 100%;
-        width: 100%;
-        background-color: beige;
-    }
+   .navbar {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 100%;
+    background-color: beige;
+    font-size: medium;
+    box-sizing: border-box; /* Add this line */
+}
 </style>
