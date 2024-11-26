@@ -7,7 +7,8 @@
     import BookNow from "./BookNow.svelte";
     import SvelteOtp from "@k4ung/svelte-otp";
 	import { Modal, Content, Trigger}  from "sv-popup";
-        let value: string;
+        
+    let value: string;
     $: bookNowClicked = false;
     export let orientation_condition;
     export let room_display_list; 
@@ -23,7 +24,7 @@
 <div class="cardStyle" style="flex-direction: row;">
     <div class="carousel-container" style={styleForCarousel}>
         <Carousel.Root class="w-full max-w-xs">
-        <Carousel.Content>
+        <Carousel.Content style="width: 100%">
             {#each room.images as room_image, i (i)}
             <Carousel.Item>
                 <div class="p-1">
@@ -63,7 +64,7 @@
 
 <style>
     .cardStyle{
-        padding: 1%;
+        padding: 0.5%;
         justify-content: center;
         align-items: center;
         border-radius: 20px;

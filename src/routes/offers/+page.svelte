@@ -2,7 +2,7 @@
     import Navbar from "$lib/components/Navbar.svelte";
     import Footer from "$lib/components/Footer.svelte";
     import { onMount } from 'svelte';
-    import {wp_url} from '../../backend/constants.js';
+    import {wp_url_coupon24} from '../../backend/constants.js';
 //   import { tweened } from 'svelte/motion';
 
   let colorIndex = 0;
@@ -23,11 +23,11 @@
   <div 
   class="offer-bubble" 
   style="background-color: {colors[colorIndex]}" 
-  on:click={() => window.open(wp_url, '_blank')}
+  on:click={() => window.open(wp_url_coupon24, '_blank')}
   tabIndex=0
     on:keydown={(e) => {
     if (e.key === 'Enter') {
-        window.open(wp_url, '_blank')
+        window.open(wp_url_coupon24, '_blank')
     }
     }}
   >
@@ -37,8 +37,6 @@
 <div class="footer-fixed">
     <Footer/>
 </div>
-
-
 
 <style>
 
@@ -65,9 +63,6 @@
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.5s ease-in-out;
 }
-/* .offer-bubble {
-  
-} */
 
 .offer-text {
   font-size: 36px;
