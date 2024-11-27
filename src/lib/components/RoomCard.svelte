@@ -1,21 +1,33 @@
 <script lang="ts">
     import * as Card from "$lib/components/ui/card/index.js";
     import * as Carousel from "$lib/components/ui/carousel/index.js";
-    import logoIcon from "$lib/resources/logo_icon.png";
     import {Button} from '$lib/components/ui/button';
-    import * as HoverCard from "$lib/components/ui/hover-card";
     import BookNow from "./BookNow.svelte";
-    import SvelteOtp from "@k4ung/svelte-otp";
-	import { Modal, Content, Trigger}  from "sv-popup";
-        let value: string;
+    import {wp_url_coupon24} from "../../backend/constants.js";
+    import { onMount } from 'svelte';
+        
+    let value: string;
     $: bookNowClicked = false;
     export let orientation_condition;
     export let room_display_list; 
     let bookNow = () => {
         console.log("Booking Now.");
+        window.open(wp_url_coupon24, '_blank');
         bookNowClicked = true;
     }
     $: styleForCarousel = orientation_condition ? 'display: flex; width: 100%' : 'width: 100%';    
+
+    let colorIndex = 0;
+  let colors = ['#FFC800', '#F9F5E3', '#F8B9AA'];
+
+  onMount(() => {
+    //@ts-ignore
+    const intervalId = setInterval(() => {
+      colorIndex = (colorIndex + 1) % colors.length;
+    }, 500);
+
+    return () => clearInterval(intervalId);
+  });
 </script>
 
 
@@ -23,7 +35,7 @@
 <div class="cardStyle" style="flex-direction: row;">
     <div class="carousel-container" style={styleForCarousel}>
         <Carousel.Root class="w-full max-w-xs">
-        <Carousel.Content>
+        <Carousel.Content style="width: 100%">
             {#each room.images as room_image, i (i)}
             <Carousel.Item>
                 <div class="p-1">
@@ -50,11 +62,13 @@
                 <h2 style="font-size: 15px; text-decoration: line-through;">₹{room.initial_price}  </h2>
                 <h2 style="font-size: 20px; color: red;"> ₹{room.updated_price}  </h2>
             </div>
-            <Button on:click={bookNow} style="width: 50%; font-size: 80%;">Book Now</Button>
+            <Button on:click={bookNow} style="background-color: {colors[colorIndex]}; width: 50%; font-size: 80%;">Book Now</Button>
+
+<!--             Adding BookNow Component
             {#if bookNowClicked}
                 <BookNow/>
             {/if}
-            
+             -->
         </div>
         
     </div>
@@ -63,7 +77,7 @@
 
 <style>
     .cardStyle{
-        padding: 1%;
+        padding: 0.5%;
         justify-content: center;
         align-items: center;
         border-radius: 20px;
