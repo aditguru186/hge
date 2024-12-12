@@ -21,7 +21,7 @@ export let room_display_list = [
         initial_price: 5000,
         updated_price: 4000,
         // price: process.env.ROOM_PRICE_SUPER_DELUXE_DOUBLE,// coming as undefined, try importing the environment variable
-        description: "Experience luxury at our Super Deluxe Double Bed Room, featuring king-size bed, marble bathroom, AC, Wi-Fi, LED TV",
+        description: "Experience luxury at our Super Deluxe Tripple Bed Room, featuring king-size bed, marble bathroom, AC, Wi-Fi, LED TV",
         images: ["img4_lq.png", "img5_lq.png", "img6_lq.png", "img7_lq.png", "img8_lq.png"]
     },
     {
@@ -37,7 +37,7 @@ export let room_display_list = [
         initial_price: 3500,
         updated_price: 2500,
         // price: process.env.ROOM_PRICE_SUPER_DELUXE_DOUBLE,// coming as undefined, try importing the environment variable
-        description: "Experience luxury at our Super Deluxe Double Bed Room, featuring king-size bed, marble bathroom, AC, Wi-Fi, LED TV",
+        description: "Experience luxury at our  Deluxe Triple Bed Room, featuring king-size bed, marble bathroom, AC, Wi-Fi, LED TV",
         images: ["img12_lq.png", "img13_lq.png", "img14_lq.png", "img15_lq.png"]
     }
 ];
