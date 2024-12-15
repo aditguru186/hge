@@ -116,11 +116,10 @@
         align-items: center;
         padding: 2%;
         border-radius: 20px;
-
     }
     .footer-fixed{
         position: relative;
-        bottom: 0;
+        bottom: 0px;
         width: 100%;
     }
     .selector{
