@@ -53,7 +53,7 @@
     {#if (showOTP_Box)}
         <Modal basic big={true} button={true}>
         <Content>
-        <p style="color: red">OTP has been sent to {number}</p>
+            <p style="color: red">OTP has been sent to {number}</p>
         </Content>
         <!-- <Trigger>
         </Trigger> -->

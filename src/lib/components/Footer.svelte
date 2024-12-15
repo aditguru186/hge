@@ -43,6 +43,7 @@
     }
 
     .footer_img{
+        bottom: 0;
         height:120px;
         width:140px;
         position: absolute;

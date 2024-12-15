@@ -119,7 +119,7 @@
 
     }
     .footer-fixed{
-        position: relative;
+        position: absolute;
         bottom: 0;
         width: 100%;
     }
