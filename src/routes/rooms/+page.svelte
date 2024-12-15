@@ -118,7 +118,7 @@
         border-radius: 20px;
     }
     .footer-fixed{
-        position: relative;
+        position: fixed;
         bottom: 0px;
         width: 100%;
     }
