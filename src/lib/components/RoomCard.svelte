@@ -77,14 +77,14 @@
 
 <style>
     .cardStyle{
-        padding: 0.5%;
+        padding: 5%; 
         justify-content: center;
         align-items: center;
         border-radius: 20px;
         height: 50%;
-        width: 80%;
+        width: 100%;
         background-color: hsl(48, 96%, 89%);
-        margin: auto;
+        margin: 10px;
     }
     .cardStyle > div {
         margin: 0 10px;
@@ -92,8 +92,14 @@
     .carousel-description{
         display: flex;
         flex-direction: column;
-        /* justify-content: left; */
+        justify-content: left;
         /* align-items: center; */
         padding : 7%;
     }    
+    @media (width < 768px) {
+        .cardStyle{
+            max-width: 430px;
+        }
+    }
+   
 </style>
