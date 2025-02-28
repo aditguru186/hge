@@ -1,11 +1,11 @@
-import { 
-    ROOM_PRICE_SUPER_DELUXE_DOUBLE,
-    ROOM_PRICE_DELUXE_DOUBLE,
-    ROOM_PRICE_DELUXE_TRIPLE,
-    ROOM_PRICE_SUPER_DELUXE_TRIPLE,
-    POCKETBASE_EMAIL,
-    POCKETBASE_PASSWORD
-} from '$env/static/private';
+// import { 
+//     ROOM_PRICE_SUPER_DELUXE_DOUBLE,
+//     ROOM_PRICE_DELUXE_DOUBLE,
+//     ROOM_PRICE_DELUXE_TRIPLE,
+//     ROOM_PRICE_SUPER_DELUXE_TRIPLE,
+//     POCKETBASE_EMAIL,
+//     POCKETBASE_PASSWORD
+// } from '$env/static/private';
 import RoomTypes from "../../backend/constants.js";
 // import { json } from '@sveltejs/kit';
 
@@ -19,7 +19,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 2,
@@ -30,7 +30,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 3,
@@ -41,7 +41,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 4,
@@ -52,7 +52,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 5,
@@ -63,7 +63,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 6,
@@ -74,7 +74,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 7,
@@ -85,7 +85,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 8,
@@ -96,7 +96,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 9,
@@ -107,7 +107,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 10,
@@ -118,7 +118,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 11,
@@ -129,7 +129,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 12,
@@ -140,7 +140,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 13,
@@ -151,7 +151,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 14,
@@ -162,7 +162,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 15,
@@ -173,7 +173,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 16,
@@ -184,7 +184,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 17,
@@ -195,7 +195,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 18,
@@ -206,7 +206,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 19,
@@ -217,7 +217,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 20,
@@ -228,7 +228,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 21,
@@ -239,7 +239,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "id": 22,
@@ -250,7 +250,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_DOUBLE
+        "price": 3000
     },
     {
         "room_number": 201,
@@ -260,7 +260,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 23,
@@ -271,7 +271,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 24,
@@ -282,7 +282,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 25,
@@ -293,7 +293,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 26,
@@ -304,7 +304,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 27,
@@ -315,7 +315,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 28,
@@ -326,7 +326,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 29,
@@ -337,7 +337,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 30,
@@ -348,7 +348,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 31,
@@ -359,7 +359,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 32,
@@ -370,7 +370,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 33,
@@ -381,7 +381,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 34,
@@ -392,7 +392,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 35,
@@ -403,7 +403,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 36,
@@ -414,7 +414,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 37,
@@ -425,7 +425,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_DOUBLE
+        "price": 2000
     },
     {
         "id": 38,
@@ -436,7 +436,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 39,
@@ -447,7 +447,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 40,
@@ -458,7 +458,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 41,
@@ -469,7 +469,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 42,
@@ -480,7 +480,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 43,
@@ -491,7 +491,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 44,
@@ -502,7 +502,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 45,
@@ -513,7 +513,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 46,
@@ -524,7 +524,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 47,
@@ -535,7 +535,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 48,
@@ -546,7 +546,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 49,
@@ -557,7 +557,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 50,
@@ -568,7 +568,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 51,
@@ -579,7 +579,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 52,
@@ -590,7 +590,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 53,
@@ -601,7 +601,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 54,
@@ -612,7 +612,7 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_TRIPLE
+        "price": 2500
     },
     {
         "id": 55,
@@ -623,15 +623,15 @@ const seedData_rooms = [
         "availability": true,
         "createdAt": "2023-02-20T14:30:00Z",
         "updatedAt": "2023-02-20T14:30:00Z",
-        "price": ROOM_PRICE_SUPER_DELUXE_TRIPLE
+        "price": 2500
     }
 
 ];
 export async function GET() {
     return new Response(JSON.stringify({
         rooms: seedData_rooms,
-        POCKETBASE_EMAIL: POCKETBASE_EMAIL,
-        POCKETBASE_PASSWORD: POCKETBASE_PASSWORD
+        POCKETBASE_EMAIL: "aditguru186@gmail.com",
+        POCKETBASE_PASSWORD: "_____________"
     }), {
         status: 200
     });

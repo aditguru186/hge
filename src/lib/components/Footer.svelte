@@ -6,7 +6,7 @@
 
 </script>
 <div class="footer">
-    <a href="/"><img class ="footer_img" src={logoIcon} alt="logoIcon"></a>
+    <!-- <a href="/"><img class ="footer_img" src={logoIcon} alt="logoIcon"></a> -->
     <div class="container">
        +91-9861133360
         <br/>
@@ -31,22 +31,31 @@
         display: flex;
         position: relative;
         bottom: 0;
+        height: 100%;
         width: 100%;
         background-color: #333;
         color: #fff;
         text-align: center;
-        padding: 10px;
-        clear: both;
+        padding: 1px;
         border-top: 1px solid #444;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .footer_img{
-        height:120px;
-        width:140px;
-        position: absolute;
+        font-size: 0.8em;
     }
     .container{
         display: block;
+    }
+
+    @media (width < 768px) {
+        .footer{
+           flex-direction: column;
+           max-width: 430px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            margin: 5px;
+            justify-content: center;
+
+        }
     }
 </style>

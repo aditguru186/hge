@@ -105,7 +105,7 @@
         padding-bottom: 2%;
         width: 100%;
         height: 100%;
-        background-color: hsl(48, 96%, 89%);
+        background-color: rgb(254, 243, 200);
         border-radius: 20px;
         margin: auto;
     }
@@ -116,11 +116,10 @@
         align-items: center;
         padding: 2%;
         border-radius: 20px;
-
     }
     .footer-fixed{
         position: fixed;
-        bottom: 0;
+        bottom: 0px;
         width: 100%;
     }
     .selector{

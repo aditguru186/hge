@@ -11,14 +11,24 @@
     let number: number;
     $:showOTP_Box = false;
     $:verrifiedSuccessfully = false;
+    $:number_alert = false;
     let value: string;
     let OTP:number;
 
     let sendOTP = () => {
-        console.log("Sending OTP to ", number);
-        OTP = Math.floor(Math.random() * 10000);
-        console.log("OTP : ", OTP);
-        showOTP_Box = true;
+        if(number && number.toString().length == 10){
+            console.log("Sending OTP to ", number);
+            OTP = Math.floor(Math.random() * 10000);
+            console.log("OTP : ", OTP);
+            //fire OTP
+            showOTP_Box = true;
+            number_alert = false;
+        }
+        else{
+            console.log("Please enter a 10-digit contact number");
+            number_alert = true;
+        }
+        
     }
 
     let verifyOTP = () => {
@@ -37,13 +47,13 @@
 
 <div class="hoverBookNow">
     <Input type="Number" placeholder="Enter Contact number for inquiry." bind:value={number}/>
-    <!-- {#if number.length() !== 10}
+    {#if (number_alert)}
         <p style="color: red">Please enter a 10-digit contact number</p>
-    {/if} -->
+    {/if}
     {#if (showOTP_Box)}
         <Modal basic big={true} button={true}>
         <Content>
-        <p style="color: red">OTP has been sent to {number}</p>
+            <p style="color: red">OTP has been sent to {number}</p>
         </Content>
         <!-- <Trigger>
         </Trigger> -->

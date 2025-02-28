@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import logoIcon from "$lib/resources/logo_icon.png";
      let routes = [
         { name: "Home", path: "/" },
@@ -6,9 +6,22 @@
         { name: "Offers", path: "/offers" },
         { name: "About Us", path: "/about_us" },
     ];
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        // Add your mobile-specific logic here, e.g., adjusting font sizes
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+            // Apply mobile styles
+           let doc = document.querySelector('.navbar') as any;
+            if(doc){
+                doc.style.fontSize = '14px';
+            }
+        }
+    });
 </script>
 
-<a href="/"><img style="width: 100px; height: 100px; position: absolute; left:1px; top: 10px;" src={logoIcon} alt="logoIcon"></a>
+<a href="/"><img class="logo_img" src={logoIcon} alt="logoIcon"></a>
 <div class="navbar">
     {#each routes as route}
         <a href={route.path}>{route.name}</a>
@@ -19,12 +32,30 @@
 <style>
     .navbar {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        border: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
         border-radius: 3px;
-        height: 100%;
-        width: 100%;
         background-color: beige;
+        margin-left: auto;
     }
+
+    .navbar a {
+        color: black;
+        text-decoration: none;
+        margin: 10px;
+    }
+
+    .logo_img{
+        width: 100px; height: 100px; position: absolute;;
+    }
+
+    @media (width < 768px) {
+        .navbar {
+            /* flex-direction: column; */
+            justify-content: center;
+            max-width: 430px;
+        }
+    }
+
 </style>
