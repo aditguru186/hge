@@ -21,7 +21,7 @@
     });
 </script>
 
-<a href="/"><img style="width: 100px; height: 100px; position: absolute; left:1px; top: 10px;" src={logoIcon} alt="logoIcon"></a>
+<a href="/"><img class="logo_img" src={logoIcon} alt="logoIcon"></a>
 <div class="navbar">
     {#each routes as route}
         <a href={route.path}>{route.name}</a>
@@ -32,7 +32,7 @@
 <style>
     .navbar {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding: 10px;
         border-radius: 3px;
@@ -46,27 +46,16 @@
         margin: 10px;
     }
 
-    @media (max-width: 768px) {
+    .logo_img{
+        width: 100px; height: 100px; position: absolute;;
+    }
+
+    @media (width < 768px) {
         .navbar {
-            flex-direction: row;
-            align-items: flex-start;
-            border-radius: 3px;
-            background-color: beige;
-        }
-        .navbar a {
-            margin: 5px 0;
+            /* flex-direction: column; */
+            justify-content: center;
+            max-width: 430px;
         }
     }
-   /* .navbar {
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 100vw;
-    background-color: beige;
-    font-size: medium;
-    box-sizing: border-box; /* Add this line */
-    /* } */ 
+
 </style>

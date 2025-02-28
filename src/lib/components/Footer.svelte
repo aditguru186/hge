@@ -41,14 +41,21 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         font-size: 0.8em;
     }
-
-    .footer_img{
-        bottom: 0;
-        height:120px;
-        width:140px;
-        position: absolute;
-    }
     .container{
         display: block;
+    }
+
+    @media (width < 768px) {
+        .footer{
+           flex-direction: column;
+           max-width: 430px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            margin: 5px;
+            justify-content: center;
+
+        }
     }
 </style>
