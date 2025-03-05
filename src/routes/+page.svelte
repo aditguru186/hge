@@ -1,11 +1,43 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import {Button} from '$lib/components/ui/button';
+    import { onMount, onDestroy } from 'svelte';
+    // import {Button} from '$lib/components/ui/button';
     import Navbar from '$lib/components/Navbar.svelte';
     import logoIcon from "$lib/resources/logo_icon.png";
     import RoomCard from '$lib/components/RoomCard.svelte';
     import {room_display_list} from '../backend/constants.js';
     import Footer from '$lib/components/Footer.svelte';
+    import {wp_url_coupon24} from '../backend/constants.js';
+    import '$lib/style.css';
+
+    const carouselImages = [
+        'src/lib/resources/badathakura1.png',
+        'src/lib/resources/jaijagannath2.png',
+        'src/lib/resources/maa3.png',
+        'src/lib/resources/rooms_images/img2_lq.png',
+        'src/lib/resources/rooms_images/img4_lq.png',
+        'src/lib/resources/rooms_images/img6_lq.png'
+    ];
+
+    // State to track current image index
+    let currentImageIndex = 0;
+
+    // Timer to change images
+    let carouselInterval: NodeJS.Timeout;
+
+    // Function to cycle through images
+    function cycleImages() {
+        currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+    }
+
+    // Start the carousel when component mounts
+    onMount(() => {
+        carouselInterval = setInterval(cycleImages, 2000);
+    });
+
+    // Clean up interval when component is destroyed
+    onDestroy(() => {
+        clearInterval(carouselInterval);
+    });
 
     
     let innerWidth = 0
@@ -14,6 +46,7 @@
     
     let bookNow = () => {
         console.log("Booking Now.");
+        window.open(wp_url_coupon24, '_blank');
     }
 
 </script>
@@ -25,6 +58,25 @@
 <svelte:window bind:innerWidth bind:innerHeight />
 <Navbar />
 <!-- have to add hero section here, with book now as the first thing that pops up. -->
+<div class="hero-section">
+    <div class="left-section">
+        <h1>Stay near Lord Jagannath!</h1>
+        <h4>Book at Hotel Guru Estate and get a chance to visit <b>Jagannath Temple</b></h4>
+        <button class="book-now-btn" on:click={ bookNow}>Book Now</button>
+    </div>
+    <div class="right-section">
+        <div class="carousel">
+            {#each carouselImages as image, index (image)}
+            <img 
+                src={image} 
+                alt={`Carousel image ${index + 1}`}
+                class:active={index === currentImageIndex}
+                class="carousel-image"
+            />
+        {/each}
+        </div>
+    </div>
+</div>
 {#if orientation_condition}
 <section>
     <RoomCard bind:orientation_condition={orientation_condition} room_display_list={room_display_list}/>
@@ -44,12 +96,93 @@
 
 
 <style>
+    .hero-section{
+        display:grid;
+        justify-content: left;
+        width: 100%;
+        height: 70vh;
+        /* background-image: url('https://images.pexels.com/photos/1242348/pexels-photo-1242348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+        /* background-color: var(--primary-color); */
+        background: linear-gradient(135deg, #fef3c8, #ffdab9, #ff8c42);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* grid-template-columns: ; */
+        grid-template-columns: repeat(2, 2fr);
+    }
+    .left-section{
+        position: absolute;
+        display: flex;
+        width: 40%;
+        height: 70vh;
+        align-items: center;
+        justify-content: left;
+        flex-direction: column;
+        padding: 1%;
+        margin-top: 10%;
+    }
+    .left-section h1{
+        font-size: 50px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(74, 45, 111);
+    }
+    .left-section h4{
+        font-size: 20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(74, 45, 111);
+    }
+    .hero-section .left-section .book-now-btn{
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        border: 2px solid #ffffff;
+        background-color: #00D700;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        animation: bounce 0.8s infinite ease-in-out;
+        z-index: 1;
+    }
+    .right-section {
+        /* position: relative; */
+        position: relative;
+        right:10px;
+        /* left: 50%; */
+        margin-top:20px;
+        margin-left: 100%;
+        width: 100%;
+        min-height:50%;
+        overflow: hidden;
+        border-radius: 20px;
+        border: 2px solid #ffffff;
+    }
+
+    .carousel {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .carousel-image.active {
+        opacity: 1;
+    }
+    
     section {
         padding: 1%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* margin: 1%; */
     }
     .footer-fixed{
         bottom:0;
@@ -75,6 +208,27 @@
         }
         60% {
             transform: translateY(-10px);/*move a little less up*/
+        }
+    }
+
+    @media(width < 768px){
+        .hero-section{
+            height: 40vh;
+            width:120%;
+            display: flex;
+        }
+        .left-section{
+            width: 100%;
+            height: 40vh;
+        }
+        .right-section{
+            display: flex;
+        }
+        .left-section h1{
+            font-size: 30px;
+        }
+        .left-section h4{
+            font-size: 15px;
         }
     }
 
