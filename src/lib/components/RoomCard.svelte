@@ -83,7 +83,8 @@
         border-radius: 20px;
         height: 50%;
         width: 100%;
-        background-color: hsl(48, 96%, 89%);
+        /* background-color: #fef3c8; */
+        background: linear-gradient(135deg, #fef3c8, #ffd700, #ffa500);
         margin: 10px;
     }
     .cardStyle > div {

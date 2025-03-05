@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #fef3c8;
+    --secondary-color: #ffd117;
+    --secondary-color-dark: #d79447;
+    --off-white: rgb(182, 188, 201);
+    --max-width: 1200px;
+}
+
+body{
+    background-color: var(--primary-color);
+}
