@@ -15,7 +15,7 @@
         window.open(wp_url_coupon24, '_blank');
         bookNowClicked = true;
     }
-    $: styleForCarousel = orientation_condition ? 'display: flex; width: 100%' : 'width: 100%';    
+    $: styleForCarousel = orientation_condition ? 'display: flex; width: 100%' : 'width: 70%';    
 
     let colorIndex = 0;
   let colors = ['#FFC800', '#F9F5E3', '#F8B9AA'];

@@ -10,13 +10,16 @@
     import '$lib/style.css';
 
     const carouselImages = [
-        'src/lib/resources/badathakura1.png',
-        'src/lib/resources/jaijagannath2.png',
-        'src/lib/resources/maa3.png',
-        'src/lib/resources/rooms_images/img2_lq.png',
-        'src/lib/resources/rooms_images/img4_lq.png',
-        'src/lib/resources/rooms_images/img6_lq.png'
+        `/src/lib/resources/badathakura1.png`,
+        `/src/lib/resources/jaijagannath2.png`,
+        `/src/lib/resources/maa3.png`,
+        `/src/lib/resources/rooms_images/img2_lq.png`,
+        `/src/lib/resources/rooms_images/img4_lq.png`,
+        `/src/lib/resources/rooms_images/img6_lq.png`
     ];
+
+    let importedImages: string[] = [];
+    // const loadImagesLisr [] = ;
 
     // State to track current image index
     let currentImageIndex = 0;
@@ -24,15 +27,37 @@
     // Timer to change images
     let carouselInterval: NodeJS.Timeout;
 
+    let isLoading = true;
+
+
+    //preload images
+    async function loadImages(){
+        const loadedImages = [];
+        for(const imagePath of carouselImages){
+            try{
+                const imageModule = await import(imagePath);
+                loadedImages.push(imageModule.default);
+            }catch(error){
+                console.error(`Failed to load image: ${imagePath}`, error);
+            }
+        }
+        isLoading = false;
+        return loadedImages;
+    }
+
+    onMount(async () => {
+        importedImages = await loadImages();
+        carouselInterval = setInterval(cycleImages, 2000);
+
+    });
+
     // Function to cycle through images
     function cycleImages() {
         currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
     }
 
     // Start the carousel when component mounts
-    onMount(() => {
-        carouselInterval = setInterval(cycleImages, 2000);
-    });
+
 
     // Clean up interval when component is destroyed
     onDestroy(() => {
@@ -68,14 +93,18 @@
     </div>
     <div class="right-section">
         <div class="carousel">
-            {#each carouselImages as image, index (image)}
-            <img 
-                src={image} 
-                alt={`Carousel image ${index + 1}`}
-                class:active={index === currentImageIndex}
-                class="carousel-image"
-            />
-        {/each}
+            {#if isLoading}
+                <p>.....Loading images......</p>
+            {:else}
+                {#each importedImages as src, index (src)}
+                    <img 
+                        {src}
+                        alt={`Carousel image ${index + 1}`}
+                        class:active={index === currentImageIndex}
+                        class="carousel-image"
+                    />
+                {/each}
+            {/if}
         </div>
     </div>
 </div>
@@ -111,6 +140,7 @@
         background-repeat: no-repeat;
         /* grid-template-columns: ; */
         grid-template-columns: repeat(2, 2fr);
+        border-radius: 20px;
     }
     .left-section{
         position: absolute;
@@ -221,7 +251,7 @@
     @media(width < 768px){
         .hero-section{
             height: 100vh;
-            width:120%;
+            width:100%;
             display: grid;
             grid-template-rows: 1fr 1fr;
             z-index: 1;
@@ -233,12 +263,15 @@
             align-items: center;
         }
         .right-section{
-            margin-top: -150px;
+            margin-top: -110px;
             display: flex;
             z-index: 2;
             grid-row:2;
-            min-width: 400px;
-            margin-left: 20%;
+            min-width: 360px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            /* margin-right:-0px; */
+            
         }
         .left-section h1{
             font-size: 30px;
