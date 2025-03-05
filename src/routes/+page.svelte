@@ -61,7 +61,9 @@
 <div class="hero-section">
     <div class="left-section">
         <h1>Stay near Lord Jagannath!</h1>
-        <h4>Book at Hotel Guru Estate and get a chance to visit <b>Jagannath Temple</b></h4>
+        <h5>Book at Hotel Guru Estate and get a chance to experience <b>Ratha Yatra 2025</b> and visit <b>Jagannath Temple</b></h5>
+        <br/>
+        <p>Click below to proceed.</p>
         <button class="book-now-btn" on:click={ bookNow}>Book Now</button>
     </div>
     <div class="right-section">
@@ -126,7 +128,12 @@
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color: rgb(74, 45, 111);
     }
-    .left-section h4{
+    .left-section h5{
+        font-size: 20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(74, 45, 111);
+    }
+    .left-section p{
         font-size: 20px;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color: rgb(74, 45, 111);
@@ -144,10 +151,10 @@
         z-index: 1;
     }
     .right-section {
-        /* position: relative; */
+        position: relative; 
+        /* left: 50%; */
         position: relative;
         right:10px;
-        /* left: 50%; */
         margin-top:20px;
         margin-left: 100%;
         width: 100%;
@@ -213,16 +220,25 @@
 
     @media(width < 768px){
         .hero-section{
-            height: 40vh;
+            height: 100vh;
             width:120%;
-            display: flex;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            z-index: 1;
         }
         .left-section{
             width: 100%;
             height: 40vh;
+            grid-row:1;
+            align-items: center;
         }
         .right-section{
+            margin-top: -150px;
             display: flex;
+            z-index: 2;
+            grid-row:2;
+            min-width: 400px;
+            margin-left: 20%;
         }
         .left-section h1{
             font-size: 30px;
