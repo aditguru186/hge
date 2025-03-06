@@ -47,6 +47,7 @@
     }
 
     .logo_img{
+        margin-left: -20px;
         width: 100px; height: 100px; position: absolute;;
     }
 
@@ -54,7 +55,8 @@
         .navbar {
             /* flex-direction: column; */
             justify-content: center;
-            max-width: 430px;
+            width:120%;
+            /* max-width: 430px; */
         }
     }
 

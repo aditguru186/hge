@@ -49,6 +49,7 @@
         .footer{
            flex-direction: column;
            max-width: 430px;
+           width:140%;
         }
         .container{
             display: flex;

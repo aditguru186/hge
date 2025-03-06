@@ -15,7 +15,7 @@
         window.open(wp_url_coupon24, '_blank');
         bookNowClicked = true;
     }
-    $: styleForCarousel = orientation_condition ? 'display: flex; width: 100%' : 'width: 100%';    
+    $: styleForCarousel = orientation_condition ? 'display: flex; width: 100%' : 'width: 70%';    
 
     let colorIndex = 0;
   let colors = ['#FFC800', '#F9F5E3', '#F8B9AA'];
@@ -83,7 +83,8 @@
         border-radius: 20px;
         height: 50%;
         width: 100%;
-        background-color: hsl(48, 96%, 89%);
+        /* background-color: #fef3c8; */
+        background: linear-gradient(135deg, #fef3c8, #ffd700, #ffa500);
         margin: 10px;
     }
     .cardStyle > div {
