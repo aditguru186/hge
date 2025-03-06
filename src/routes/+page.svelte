@@ -9,16 +9,18 @@
     import {wp_url_coupon24} from '../backend/constants.js';
     import '$lib/style.css';
 
+    import badathakura1 from '$lib/resources/badathakura1.png';
+    import jaijagannath2 from '$lib/resources/jaijagannath2.png';
+    import maa3 from '$lib/resources/maa3.png';
+    import img2 from '$lib/resources/rooms_images/img2_lq.png';
+    import img4 from '$lib/resources/rooms_images/img4_lq.png';
+    import img6 from '$lib/resources/rooms_images/img6_lq.png';
+
     const carouselImages = [
-        `/src/lib/resources/badathakura1.png`,
-        `/src/lib/resources/jaijagannath2.png`,
-        `/src/lib/resources/maa3.png`,
-        `/src/lib/resources/rooms_images/img2_lq.png`,
-        `/src/lib/resources/rooms_images/img4_lq.png`,
-        `/src/lib/resources/rooms_images/img6_lq.png`
+        badathakura1, jaijagannath2, maa3, img2, img4, img6
     ];
 
-    let importedImages: string[] = [];
+    // let importedImages: string[] = [];
     // const loadImagesLisr [] = ;
 
     // State to track current image index
@@ -31,22 +33,22 @@
 
 
     //preload images
-    async function loadImages(){
-        const loadedImages = [];
-        for(const imagePath of carouselImages){
-            try{
-                const imageModule = await import(imagePath);
-                loadedImages.push(imageModule.default);
-            }catch(error){
-                console.error(`Failed to load image: ${imagePath}`, error);
-            }
-        }
-        isLoading = false;
-        return loadedImages;
-    }
+    // async function loadImages(){
+    //     const loadedImages = [];
+    //     for(const imagePath of carouselImages){
+    //         try{
+    //             const imageModule = await import(imagePath);
+    //             loadedImages.push(imageModule.default);
+    //         }catch(error){
+    //             console.error(`Failed to load image: ${imagePath}`, error);
+    //         }
+    //     }
+    //     isLoading = false;
+    //     return loadedImages;
+    // }
 
     onMount(async () => {
-        importedImages = await loadImages();
+        // importedImages = await loadImages();
         carouselInterval = setInterval(cycleImages, 2000);
 
     });
@@ -93,18 +95,18 @@
     </div>
     <div class="right-section">
         <div class="carousel">
-            {#if isLoading}
+            <!-- {#if isLoading}
                 <p>.....Loading images......</p>
-            {:else}
-                {#each importedImages as src, index (src)}
+            {:else} -->
+                {#each carouselImages as src, index (src)}
                     <img 
-                        {src}
+                        src={src}
                         alt={`Carousel image ${index + 1}`}
                         class:active={index === currentImageIndex}
                         class="carousel-image"
                     />
                 {/each}
-            {/if}
+            <!-- {/if} -->
         </div>
     </div>
 </div>
