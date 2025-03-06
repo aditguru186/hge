@@ -9,9 +9,9 @@
     import {wp_url_coupon24} from '../backend/constants.js';
     import '$lib/style.css';
 
-    import badathakura1 from '$lib/resources/badathakura1.png';
-    import jaijagannath2 from '$lib/resources/jaijagannath2.png';
-    import maa3 from '$lib/resources/maa3.png';
+    import badathakura1 from '$lib/resources/1.jpg';
+    import jaijagannath2 from '$lib/resources/2.jpg';
+    import maa3 from '$lib/resources/3.jpg';
     import img2 from '$lib/resources/rooms_images/img2_lq.png';
     import img4 from '$lib/resources/rooms_images/img4_lq.png';
     import img6 from '$lib/resources/rooms_images/img6_lq.png';
@@ -281,6 +281,28 @@
         .left-section h4{
             font-size: 15px;
         }
+    }
+    @media(width<376px){
+        .right-section{
+            margin-top: 10px;
+            margin-left: 0 px;
+            min-width: 320px;;
+
+        }
+        .right-section img{
+            width: 100%;
+            height: 100%;
+        }
+        /* .left-section h1{
+            font-size: 20px;
+        }
+        .left-section h4{
+            font-size: 10px;
+        }
+        .left-section p{
+            font-size: 10px;
+        } */
+
     }
 
 
