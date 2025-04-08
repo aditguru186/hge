@@ -29,28 +29,8 @@
     // Timer to change images
     let carouselInterval: NodeJS.Timeout;
 
-    let isLoading = true;
-
-
-    //preload images
-    // async function loadImages(){
-    //     const loadedImages = [];
-    //     for(const imagePath of carouselImages){
-    //         try{
-    //             const imageModule = await import(imagePath);
-    //             loadedImages.push(imageModule.default);
-    //         }catch(error){
-    //             console.error(`Failed to load image: ${imagePath}`, error);
-    //         }
-    //     }
-    //     isLoading = false;
-    //     return loadedImages;
-    // }
-
     onMount(async () => {
-        // importedImages = await loadImages();
         carouselInterval = setInterval(cycleImages, 2000);
-
     });
 
     // Function to cycle through images
@@ -95,9 +75,6 @@
     </div>
     <div class="right-section">
         <div class="carousel">
-            <!-- {#if isLoading}
-                <p>.....Loading images......</p>
-            {:else} -->
                 {#each carouselImages as src, index (src)}
                     <img 
                         src={src}
@@ -106,7 +83,6 @@
                         class="carousel-image"
                     />
                 {/each}
-            <!-- {/if} -->
         </div>
     </div>
 </div>
