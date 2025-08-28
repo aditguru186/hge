@@ -18,11 +18,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.badepandaharihar.guru" />
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.badepandaharihar.guru" />
-</svelte:head>
-<a class="whatsapp-floater" href="https://wa.me/917008096589" target="_blank" rel="noopener noreferrer">
-	<img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="whatsapp-icon">
+<a class="whatsapp-floater" href="https://wa.me/919861133360" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="whatsapp-icon">
 </a>
 
 	<HeroSection />
@@ -30,6 +27,3 @@
 	<DarsanTiming/>
 	<FAQ />
 	<Footer />
-<style>
-
-</style>

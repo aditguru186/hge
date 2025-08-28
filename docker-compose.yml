@@ -18,7 +18,7 @@ services:
       - .env
     restart: unless-stopped
     ports:
-      - 2425:3909
+      - 2424:5051
     labels:
       # Stops watchtower from updating this container
       - "com.bytesphereinnovation.watchtower.enable=false"
