@@ -18,10 +18,10 @@ services:
       - .env
     restart: unless-stopped
     ports:
-      - 3000:5051
+      - 2425:3909
     labels:
       # Stops watchtower from updating this container
-      - "com.24saat.watchtower.enable=false"
+      - "com.bytesphereinnovation.watchtower.enable=false"
 
 # Tells docker to use an IP from this range when creating this containers network. Important to avoid IP conflicts on your network.
 # Can be done globally with a setting in docker. 
