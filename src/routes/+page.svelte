@@ -17,7 +17,7 @@
     <meta property="og:description" content="Experience divine darshan at Shree Jagannath Temple Puri. Stay at Bihar & Jharkhand Atithi Bhawan with Mahaprasad seva and excellent hospitality." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.badepandaharihar.guru" />
-    
+<svelte:head>
 <a class="whatsapp-floater" href="https://wa.me/919861133360" target="_blank" rel="noopener noreferrer">
     <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="whatsapp-icon">
 </a>
