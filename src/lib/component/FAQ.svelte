@@ -16,7 +16,7 @@
         </div>
         <div class="faq-item">
             <h2>What is Shree Jagannath temple opening time?</h2>
-            <p>Jagannath Puri Temple darshan timings starts at 6:00 am. Click on link to connect on whatsapp and let us guide you in your convenience. <span><button class="btn-primary" on:click={()=>handleBookNowClick("Inquiry for Jagannath Mandir Darsan")}>अभी बुक करें</button></span> </p>
+            <p>Jagannath Puri Temple darshan timings starts at 6:00 am. Click on link to connect on whatsapp and let us guide you in your convenience. <span><button class="btn-primary" on:click={()=>handleBookNowClick("Inquiry for Jagannath Mandir Darsan")}>Book Now</button></span> </p>
         </div>
         <div class="faq-item">
             <h2>What is best time to visit Jagannath temple Puri for less crowd?</h2>
@@ -57,7 +57,7 @@
         </div>
         <div class="faq-item">
             <h2>Can I book a guide for the temple visit?</h2>
-            <p>Yes, you can book a guide for a more informative experience. <span><button class="btn-primary" on:click={()=>redirectToWhatsapp}>अभी बुक करें</button></span></p>
+            <p>Yes, you can book a guide for a more informative experience. <span><button class="btn-primary" on:click={()=>redirectToWhatsapp}>Book Now</button></span></p>
             
         </div>
     </div>

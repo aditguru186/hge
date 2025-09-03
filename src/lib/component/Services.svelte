@@ -59,10 +59,13 @@
                 <img src={image} alt={serviceName} />
                 <h3>{serviceName}</h3>
                 <p>{serviceDescription}</p>
-                <button class="service-btn" on:click={handleBtn}>अभी बुक करें</button>
+                <button class="service-btn" on:click={handleBtn}>Book Now</button>
             </li>
         {/each}
-       
+       <li class="service-card">
+            <p> Get full live support in package at the cheapest rate for 3 nights & 4 days package. </p>
+            <button class="service-btn" on:click={handleBtn}>Book Now</button>
+       </li>
     </ul>
 </div>
 
