@@ -3,4 +3,4 @@ Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /private/
 
-Sitemap: https://www.badepandaharihar.guru/sitemap.xml
+Sitemap: https://www.hotelguruestate.com/sitemap.xml
