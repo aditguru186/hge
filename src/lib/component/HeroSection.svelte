@@ -79,7 +79,7 @@
     position: relative;
     top: 0px;
     width: 100%;
-    height: 80vh;
+    height: 99vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -233,8 +233,16 @@
         .hero-content h1{
             font-size: 2rem;
         }
+        .subtitle{
+            background-color: transparent;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            text-shadow: 3px 3px 20px var(--secondary-color);
+            border-radius: 15px;
+        }
         .subtitle p{
-            font-size: 0.9rem;
+
+            font-size: 0.5rem;
         }
         .hero-btn{
             font-size: 1rem;
